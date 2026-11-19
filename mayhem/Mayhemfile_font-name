@@ -1,0 +1,11 @@
+project: savantenvs/Catime
+target: font-name
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/font-name/testsuite
+
+cmds:
+  - cmd: /mayhem/build-mayhem/fuzz_font_name
+    libfuzzer: true
+    timeout: 5

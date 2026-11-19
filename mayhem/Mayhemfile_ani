@@ -1,0 +1,11 @@
+project: savantenvs/Catime
+target: ani
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/ani/testsuite
+
+cmds:
+  - cmd: /mayhem/build-mayhem/fuzz_ani
+    libfuzzer: true
+    timeout: 5

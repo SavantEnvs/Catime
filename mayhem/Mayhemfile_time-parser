@@ -1,0 +1,11 @@
+project: savantenvs/Catime
+target: time-parser
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/time-parser/testsuite
+
+cmds:
+  - cmd: /mayhem/build-mayhem/fuzz_time_parser
+    libfuzzer: true
+    timeout: 5

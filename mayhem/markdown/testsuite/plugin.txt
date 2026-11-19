@@ -1,0 +1,2 @@
+**plugin** <color:#FF5E96_#56C6FF>CPU 42%</color>
+[repo](https://github.com/vladelaina/Catime)

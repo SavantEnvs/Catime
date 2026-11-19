@@ -1,0 +1,11 @@
+project: savantenvs/Catime
+target: update-json
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/update-json/testsuite
+
+cmds:
+  - cmd: /mayhem/build-mayhem/fuzz_update_json
+    libfuzzer: true
+    timeout: 5
